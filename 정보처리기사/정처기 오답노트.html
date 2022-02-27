@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>🗂정처기 오답노트</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3e5dc431-ecb4-48c2-93fb-1037c9647ba2" class="page sans"><header><h1 class="page-title">🗂정처기 오답노트</h1></header><div class="page-body"><h1 id="6b790b85-8937-4b1c-8222-1ac148be5166" class="">1과목(소프트웨어 설계)</h1><p id="13aba7ae-6d54-4ba9-a095-664d55e9eaaf" class="">
+</p><ul id="2bb60f66-079e-4433-82ad-107447f7cfea" class="toggle"><li><details open=""><summary><strong>소프트웨어 설계에서 사용되는 대표적인 추상화(Abstraction) 기법이 아닌 것은?</strong></summary><p id="74899de4-78d4-4cf4-9057-868fa6729748" class="">정답: 4</p><p id="c7ade90e-2ce5-4c46-84d4-153d0fb02faa" class="">&lt;문제 해설&gt;</p><p id="c4fef731-1e5d-486d-a7b2-a37e0cdc291a" class="">제어 추상화: 제어의 정확한 메커니즘을 정의하지 않고 원하는 효과를 정하는데 이용하는 방법</p><p id="7f6bb40b-2f08-4ddc-9985-96c8c1133962" class="">기능 추상화: 입력 자료를 출력자료로 변환하는 과정을 추상화하는 방법</p><p id="15e25b39-5801-4e1a-a145-68cfeeed3f51" class="">자료 추상화: 자료와 자료에 적용될 수 있는 기능을 함께 정의함으로써 자료 객체를 구성하는 방법</p></details></li></ul><ol type="1" id="a433b102-8f32-4505-a533-9fe674b7f454" class="numbered-list" start="1"><li>자료 추상화</li></ol><ol type="1" id="6a084007-16d0-464c-a642-02288226f5de" class="numbered-list" start="2"><li>제어 추상화</li></ol><ol type="1" id="14270605-84b8-4523-87ae-b9448cdbea6c" class="numbered-list" start="3"><li>과정 추상화</li></ol><ol type="1" id="60ded377-5d57-42ae-ba02-8b16b1b8a762" class="numbered-list" start="4"><li>강도 추상화</li></ol><hr id="0407a4d6-3673-410d-80db-66999e03e998"/><ul id="f5a0fae4-c454-4b4b-b9a6-2c9a77009039" class="toggle"><li><details open=""><summary><strong>요구 분석(Requirement Analysis)에 대한 설명으로 틀린 것은?</strong></summary><p id="12b189df-fa4a-4624-ae4d-aa17941589a9" class=""><strong>정답: 4</strong></p><p id="c8fdea32-264f-4248-a2af-e370df7274de" class="">&lt;문제 해설&gt;</p><p id="e71995b9-d0be-4633-b23d-dd511494e8cb" class="">기능적 요구사항- 시스템이 수행해야 하는 행위들을 구체화 한 것- 시스템에서 제공해야 할 기능을 정의한 것- 입력기능, 출력기능, 데이터베이스 기능, 통신 기능 등비기능적 요구사항- 시스템이 가져야 하는 기능 이외의 요구사항- 시스템의 전체적인 품질이나 고려해야 하는 제약사항 등- 사용 용이성, 효율성, 신뢰성, 이식성, 유연성, 확장성 등- 성능적인 면: 응답 속도, 자원 사용량 등- 보안 측면: 침입 대응, 침입 탐지, 사용자 인증, 권한 부여 등</p></details></li></ul><ol type="1" id="17206a09-5b54-4567-a350-b9a5638bccef" class="numbered-list" start="1"><li>요구 분석은 소프트웨어 개발의 실제적인 첫 단계로 사용자의 요구에 대해 이해하는 단계라 할 수 있다.</li></ol><ol type="1" id="52d5e79a-252a-4106-b5b9-964829855a2f" class="numbered-list" start="2"><li>요구 추출(Requirement Elicitation)은 프로젝트 계획 단계에 정의한 문제의 범위 안에 있는 사용자의 요구를 찾는 단계이다.</li></ol><ol type="1" id="308e3b5d-2c85-4a86-a484-a326a04ed63e" class="numbered-list" start="3"><li>도메인 분석(Domain Analysis)은 요구에 대한 정보를 수집하고 배경을 분석하여 이를 토대로 모델링을 하게 된다.</li></ol><ol type="1" id="cb585f8d-9d1d-44ef-9653-afd9f3b62dcf" class="numbered-list" start="4"><li>기능적(Functional) 요구에서 시스템 구축에대한 성능, 보안, 품질, 안정 등에 대한 요구사항을 도출한다.</li></ol><hr id="3f46e03c-5fb5-4669-83f2-addf0683a167"/><ul id="64eb4f60-3597-44af-ac39-bcc99d9b6cf4" class="toggle"><li><details open=""><summary><strong>클래스 다이어그램의 요소로 다음 설명에 해당하는 용어는?</strong></summary><p id="9675c1c6-70ac-4ae3-80bc-5ff764fe730a" class="">정답: 2</p><p id="3a4e4e93-bcd7-4d92-9b67-dd84b428b090" class="">작동, 동작 = 오퍼레이션</p><p id="3fea56f7-8b86-4460-9473-9d9aec42411c" class="">
+</p></details></li></ul><blockquote id="3d982f33-9318-4b9f-ad30-dce79b8dbeb2" class="">클래스의 동작을 의미한다</blockquote><blockquote id="7d334c42-098a-4a1c-9ec3-f30941d911bd" class="">클래스에 속하는 객채에 대하여 적용될 메서들르 정의한 것이다</blockquote><blockquote id="10549359-d6e0-4590-9742-45a5aa7cbf30" class="">UML에서는 동작에 대한 인터페이스를 지칭한다고 볼 수 있다.</blockquote><ol type="1" id="f747ea92-7161-4ace-96d8-fe76122ac5e0" class="numbered-list" start="1"><li>Instance</li></ol><ol type="1" id="6484b8d8-8b1f-492a-97e0-b944c839f361" class="numbered-list" start="2"><li>Operation</li></ol><ol type="1" id="06ae21e0-4e7c-4d6e-a36d-b82f4c3e3e7f" class="numbered-list" start="3"><li>Item</li></ol><ol type="1" id="e95c95ed-fc56-4678-be0a-46552893dbe5" class="numbered-list" start="4"><li>Hiding</li></ol><hr id="b098c942-207a-4264-b1f9-4b49d8e50437"/><ul id="be0d70e6-3298-4c24-977d-ea5f71f373c9" class="toggle"><li><details open=""><summary><strong>요구 사항 정의 및 분석·설계의 결과물을 표현하기 위한 모델링 과정에서 사용되는 다이어그램(Diagram)이 아닌 것은?</strong></summary><p id="5131af5d-e17f-42a7-a729-69858faedb6c" class="">정답: 4</p><p id="4af2492b-884f-44d7-b463-4d0b09eea2e2" class="">avl 트리는 이진 트리의 높낮이가 불규칙해지는 것을 보완하여</p><p id="fa74e293-ffd5-4fe6-b426-efd29dd5d98c" class="">일정하게 처리하기 위한 이진트리 모형이다.</p></details></li></ul><ol type="1" id="a8489efc-0839-4aa8-973d-8e059769f223" class="numbered-list" start="1"><li>Data Flow Diagram</li></ol><ol type="1" id="84b01a9d-8470-4926-80de-43c0eb458e01" class="numbered-list" start="2"><li>UML Diagram</li></ol><ol type="1" id="6eb9a30b-e8e8-4b3e-aefe-e8d6926cf76b" class="numbered-list" start="3"><li>E-R Diagram</li></ol><ol type="1" id="c1d6ffa4-6e6f-48be-a5e0-4cba02ed9027" class="numbered-list" start="4"><li>AVL Diagram</li></ol><hr id="32ab05e1-5320-4bd1-a873-fbda1efcd73e"/><ul id="a8d94355-2bda-4496-bd8c-5c7a4538e514" class="toggle"><li><details open=""><summary><strong>GoF(Gang of Four) 디자인 패턴과 관련한 설명으로 틀린 것은?</strong></summary><p id="2e4e44e9-41af-41b9-b176-822ea2e5f83e" class="">정답: 2번</p><p id="26176c4a-c097-40e8-8134-0a987a30f88a" class="">GoF(Gang of Four) 패턴: 에리히 감마(Erich Gamma), 리처드 헬름(Richard Helm), 랄프 존슨(Ralph Johnson), 존 블리시데스(John Vlissides)가 같이 고안한 디자인 패턴</p><p id="90f5e1d8-1361-4134-9a71-f5aa2e291989" class="">23가지 디자인 패턴을 3가지 분류로 정리한 디자인 패턴</p><ul id="2ab3d0d2-a078-4962-b947-39ded01a677d" class="bulleted-list"><li style="list-style-type:disc">생성 패턴: Abstract Factory, Builder, Factory Method, Prototype, Singleton</li></ul><ul id="e22f33f1-9d06-4c82-bada-b3d3e326fdcb" class="bulleted-list"><li style="list-style-type:disc">구조 패턴: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy</li></ul><ul id="f7e07454-708e-44b7-8ebe-5ef5b18645e1" class="bulleted-list"><li style="list-style-type:disc">행위 패턴: Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategty, Template Method, Visitor</li></ul><p id="ef27c1fc-b817-42a4-a329-4b01c69be309" class="">보기 2번의 Strategy 패턴은 행위 패턴에 해당</p><p id="11840e20-4dab-4730-aa55-628f3a5fe87b" class="">[해설작성자 : 이거까지알아야해?]</p><p id="0e0e2ed0-d80d-4ea6-9cba-34731930439c" class="">디자인 패턴 = 생구행을떠올리자</p><p id="c8ed7dc5-fd29-4472-91e7-a828a5e48d38" class="">생(성) - 추빌팩프싱      *추 : Abstract Factory(추상팩토리)</p><p id="a8973b1e-8d8c-4670-9d44-a90298aeea31" class="">구(조) - 어브컴데퍼플프</p><p id="8bdae4a1-056a-48e4-94e4-e0a1a258387a" class="">행(위) - 위에 2개 해당안하면 행위패턴임</p></details></li></ul><ol type="1" id="5e3c3066-2317-468e-a567-c36ee9aa6407" class="numbered-list" start="1"><li>디자인 패턴을 목적(Purpose)으로 분류할 때 생성, 구조, 행위로 분류할 수 있다.</li></ol><ol type="1" id="be5e8eec-479b-4c60-80f5-c7d3e6be62d0" class="numbered-list" start="2"><li>Strategy 패턴은 대표적인 구조 패턴으로 인스턴스를 복제하여 사용하는 구조를 말한다.</li></ol><ol type="1" id="54a51798-6592-4175-b5b3-e2d7bc13468f" class="numbered-list" start="3"><li>행위 패턴은 클래스나 객체들이 상호작용하는 방법과 책임을 분산하는 방법을 정의한다.</li></ol><ol type="1" id="9a8988eb-9ddc-48eb-82ef-cecf5bf37e03" class="numbered-list" start="4"><li>Singleton 패턴은 특정 클래스의 인스턴스가 오직 하나임을 보장하고, 이 인스턴스에 대한 접근 방법을 제공한다.</li></ol><hr id="e105cbf5-93bf-40e2-8e09-eb79fdb806d3"/><ul id="69cd22e1-391e-458e-8fb4-d2c2af25e15e" class="toggle"><li><details open=""><summary><strong>럼바우(Rumbaugh)의 객체지향 분석 기법 중 자료 흐름도(DFD)를 주로 이용하는 것은?</strong></summary><p id="2a312aad-0b11-48ac-a403-ef29c4e3a2d3" class="">정답: 1번</p><p id="1eefc7b9-3c1b-4f59-8962-dc0c084673c5" class="">럼바우 분석기법</p><p id="9573426b-6673-4c60-9007-4351f5fdc99a" class="">객,동,기</p><p id="dd5a6f67-e7ba-40b7-a537-f48485759c1e" class="">객체모델링 = 객체 다이어그램</p><p id="7c10fc5e-b56d-4668-84e2-f54e1e51f028" class="">동적모델링 = 상태 다이어그램</p><p id="31511fe9-8923-459d-9ff9-e197cb23a1e1" class="">기능 모델링 = 자료흐름도</p></details></li></ul><ol type="1" id="90f5d070-c927-4bb8-8f89-a53395a90d06" class="numbered-list" start="1"><li>기능 모델링</li></ol><ol type="1" id="f03d7a2e-9130-485f-b830-3192120fc241" class="numbered-list" start="2"><li>동적 모델링</li></ol><ol type="1" id="2180fe08-2be4-4a1b-98f0-83676db66cac" class="numbered-list" start="3"><li>객체 모델링</li></ol><ol type="1" id="6f8c14c4-88ef-4ab5-bea1-22dca02b30ad" class="numbered-list" start="4"><li>정적 모델링</li></ol><hr id="6269e694-c434-4dc8-ab11-9d72833f9214"/><ul id="09bce3fb-5c61-4b73-b39e-a4e28bcad181" class="toggle"><li><details open=""><summary><strong>객체지향 분석 기법과 관련한 설명으로 틀린것은?</strong></summary><p id="a213f207-82fe-4796-b31d-3409a68e00a3" class="">정답: 2번</p><p id="1da1ff16-c0cd-4212-9e3e-0442441ef14d" class="">2번은 순차적인 하향식 처리방식이기 때문에 절차지향 분석 기법</p></details></li></ul><ol type="1" id="d7a1cf23-9eab-435a-9ecb-850ce68b3376" class="numbered-list" start="1"><li>동적 모델링 기법이 사용될 수 있다.</li></ol><ol type="1" id="7e370b6b-d747-4722-acdb-8f1db6c09af2" class="numbered-list" start="2"><li>기능 중심으로 시스템을 파악하며 순차적인처리가 중요시되는 하향식(Top-down)방식으로 볼 수 있다.</li></ol><ol type="1" id="3e15fa81-b6b9-4e5f-ac3f-af7e3fe000a6" class="numbered-list" start="3"><li>데이터와 행위를 하나로 묶어 객체를 정의내리고 추상화시키는 작업이라 할 수 있다.</li></ol><ol type="1" id="1bafdcb8-cc10-4e08-beed-3feb05023156" class="numbered-list" start="4"><li>코드 재사용에 의한 프로그램 생산성 향상 및 요구에 따른 시스템의 쉬운 변경이 가능하다.</li></ol><hr id="63c8b9e5-60b7-49fd-a967-6294a795e126"/><ul id="c7ee0131-a69b-4fbe-a009-6e7273d52cd7" class="toggle"><li><details open=""><summary><strong>대표적으로 DOS 및 Unix 등의 운영체제에서조작을 위해 사용하던 것으로, 정해진 명령문자열을 입력하여 시스템을 조작하는 사용자인터페이스(User Interface)는?</strong></summary><p id="7586387b-4f7a-4636-998f-3b482c2e6879" class="">정답: 2번</p><p id="f4cdee89-d6c7-42cb-92f3-fa8cc137a3a4" class="">GUI(Graphical User Interface) : 사용자가 편리하게 사용할 수 있도록 입출력 등의 기능을 알기 쉬운 아이콘 따위의 그래픽으로 나타낸 것</p><p id="bf5b1d8e-aabe-4216-9657-e6ff91b9547f" class="">CLI(Command Line Interface) : 텍스트 터미널을 통해 사용자와 컴퓨터가 명령문자열로 상호 작용하는 방식</p></details></li></ul><ol type="1" id="1b4ab2ae-b5c3-42c7-a500-9371db1f169f" class="numbered-list" start="1"><li>GUI(Graphical User Interface)</li></ol><ol type="1" id="c415eb61-85b4-4b85-aed0-3cd3ba1b0b94" class="numbered-list" start="2"><li>CLI(Command Line Interface)</li></ol><ol type="1" id="00c98e31-2055-4e75-80ca-11709d390f6b" class="numbered-list" start="3"><li>CUI(Cell User Interface)</li></ol><ol type="1" id="6df83013-d1e1-48be-aa3d-2fd26a5bf838" class="numbered-list" start="4"><li>MUI(Mobile User Interface)</li></ol><hr id="315fc023-0d15-47f4-9570-a8d800a4e27b"/><ul id="abcb03af-439c-4f68-8792-c0cee66c5c25" class="toggle"><li><details open=""><summary><strong>소프트웨어 아키텍처와 관련한 설명으로 틀린것은?</strong></summary><p id="f2a7e320-d21f-46cb-b5f0-b2617d765160" class="">정답: 1번</p><p id="ac349ac5-556a-4c89-ae5f-94d8d3a4a251" class="">파이프 필터 아키텍처에서 데이터는 파이프를 통해 단방향으로 흐르고, 필터 이동시 오버헤드가 발생될 수 있음.</p><p id="c6f6c68a-8c28-459a-be7b-7cdf8ea75564" class="">(파이프 모양의 컵에 물을 계속 따르면 물이 넘쳐 흐르는것 처럼...)</p></details></li></ul><ol type="1" id="25099c3a-dddf-4df4-9a44-8fc8fae00466" class="numbered-list" start="1"><li>파이프 필터 아키텍처에서 데이터는 파이프를 통해 양방향으로 흐르며, 필터 이동 시 오버헤드가 발생하지 않는다.</li></ol><ol type="1" id="a556cb23-f192-4aea-b1d9-e1f4c1baaec6" class="numbered-list" start="2"><li>외부에서 인식할 수 있는 특성이 담긴 소프트웨어의 골격이 되는 기본 구조로 볼수 있다.</li></ol><ol type="1" id="2d2b7b22-4f13-40d5-94d5-8450a8d2cdd8" class="numbered-list" start="3"><li>데이터 중심 아키텍처는 공유 데이터저장소를 통해 접근자 간의 통신이 이루어지므로 각 접근자의 수정과 확장이 용이하다.</li></ol><ol type="1" id="c973fc2b-0cd1-44b9-90e9-a6ebec049029" class="numbered-list" start="4"><li>이해 관계자들의 품질 요구사항을 반영하여품질 속성을 결정한다.</li></ol><hr id="1b4ad0ce-f504-48fb-bbd9-3dc07d265421"/><p id="a6ef5765-be61-41be-bdc1-3e3570694337" class="">
+</p><h1 id="d2d515a5-4a86-4048-8ffa-6799413fab26" class="">2과목(소프트웨어 개발)</h1><ul id="ef044eae-ed62-4d39-a2cd-253685969851" class="toggle"><li><details open=""><summary><strong>다음 자료를 버블 정렬을 이용하여 오름차순으로 정렬할 경우 PASS 3의 결과는?</strong></summary><p id="2260a0bf-26a9-434a-87f2-52257f011341" class="">버블 정렬(Bubble Sort)</p><p id="93e5955b-0350-4d59-862b-e0eec7d9db93" class="">: 인접한 데이터를 비교하면서 데이터의 위치를 바꾸어 정렬하는 방법</p><p id="f9ee9b8d-8562-4a56-8bb3-6ee6a4f078b4" class="">한번의 Pass 내에서 다수의 교체 발생</p><p id="5836065f-84ea-46f4-8ec5-db17af747368" class="">Pass 1: 6 7 3 5 9</p><p id="813d47c4-48e6-46f3-b174-1c53487c73a7" class="">Pass 2: 6 3 5 7 9</p><p id="ec070e1e-a738-4688-8e0a-54199b1eb695" class="">Pass 3: 3 5 6 7 9</p></details></li></ul><blockquote id="7a7870fb-376a-4b56-bbcf-f6bb7d6b2fe5" class="">9, 6, 7, 3, 5</blockquote><ol type="1" id="dbd2136f-dd6b-48c8-9d46-6c7ee53854e8" class="numbered-list" start="1"><li>6, 3, 5, 7, 9</li></ol><ol type="1" id="90f10fe5-7f3a-4ec8-96cd-e066b69db0b2" class="numbered-list" start="2"><li>3, 5, 6, 7, 9</li></ol><ol type="1" id="dda1d76e-9bb8-4f9b-a4c2-7ea422bbb05f" class="numbered-list" start="3"><li>6, 7, 3, 5, 9</li></ol><ol type="1" id="79142319-22ee-4443-8dcf-14ae006c936d" class="numbered-list" start="4"><li>3, 5, 9, 6, 7</li></ol><hr id="9f5048a5-6cd5-41ea-a5ff-6a11b784bf3e"/><ul id="df801269-84a8-4e40-b771-489a844c4ea2" class="toggle"><li><details open=""><summary><strong>다음 설명에 부합하는 용어로 옳은 것은?</strong></summary><p id="abcf59c1-9bb9-4ce1-bf10-7668d26e7a46" class="">정답: 3번</p><p id="404b2910-af28-4ec1-8b4b-df97058df140" class="">규모가 큰 것을 여러 개로 나눈 조각,</p><p id="b0cbe96b-4904-4869-8804-da357a8e586f" class="">소프트웨어 구조를 이루는 기본적인 단위</p><p id="0ee352ec-6eed-44d4-b5c1-a24d8e5bd6b8" class="">모듈이 되기 위한 특징</p><ul id="8ed99e62-750c-448a-a3ea-fbd79e3b692c" class="bulleted-list"><li style="list-style-type:disc">다른 것들과 구별될 수 있는 독립적인 기능을 갖는 단위.</li></ul><ul id="b470f859-4bdd-43fe-9d93-a29b6f46a2be" class="bulleted-list"><li style="list-style-type:disc">유니크한 이름을 가짐</li></ul><ul id="1641c8b0-29c9-4f7d-bd81-99a3a05c72ad" class="bulleted-list"><li style="list-style-type:disc">모듈에서 또 다른 모듈을 호출 가능</li></ul><ul id="4e98fcba-052b-4940-ae39-81cea902afb2" class="bulleted-list"><li style="list-style-type:disc">다른 프로그램에서도 모듈을 호출할 수 있다.</li></ul><p id="d5b5bafb-8459-4f5e-b649-85eb75f60a50" class="">데이터</p><p id="6245440a-09fc-4b4f-8f3e-113dffc3fad9" class="">관찰하고 측정해서 얻은 Value</p><p id="4abda416-2cb8-4e90-b272-5fb2dec41eb5" class="">저장소</p><p id="87746e20-c977-45b6-b0d7-c4961bab83c1" class="">데이터를 논리적 구조로 조직화, 혹은 물리적 공간에 구축한것</p></details></li></ul><ul id="2c016401-8d27-483b-a503-16eb2ff7ac36" class="bulleted-list"><li style="list-style-type:disc">소프트웨어 구조를 이루며, 다른 것들과 구별될 수 있는 독립적인 기을 갖는 단위이다.</li></ul><ul id="674f2df9-c512-4e62-b1fd-c5e59ca03d07" class="bulleted-list"><li style="list-style-type:disc">하나 또는 몇 개의 논리적인 기능을 수행하기 위한 명령어들의 집합이라고도 할 수 있다.</li></ul><ul id="f211f049-3099-4893-b7fc-a1454ace4770" class="bulleted-list"><li style="list-style-type:disc">서로 모여 하나의 완전한 프로그램으로 만들어 질 수 있다.</li></ul><p id="7541b41f-3619-45dc-a0a1-d645f5742773" class="">
+</p><ol type="1" id="83db9dd6-5790-4961-9166-64dcfe4abca1" class="numbered-list" start="1"><li>통합 프로그램</li></ol><ol type="1" id="f03a4a85-9031-4ad9-8dde-02b3fee88188" class="numbered-list" start="2"><li>저장소</li></ol><ol type="1" id="69feedf8-e3e5-43d1-be21-ff66ef6fe84b" class="numbered-list" start="3"><li>모듈</li></ol><ol type="1" id="d3aa2fa9-8739-4695-8df8-976dcd2c93e7" class="numbered-list" start="4"><li>데이터</li></ol><hr id="5da131c4-b1bb-4d21-8882-35c12c1b7a2b"/><ul id="64296199-e7c8-4015-b80f-ec4c653e81c4" class="toggle"><li><details open=""><summary><strong>테스트 드라이버(Test Driver)에 대한 설명으로 틀린 것은?</strong></summary><p id="8a1bea44-7df9-463f-a72a-82f9f5efe2b1" class="">정답: 4번</p><div id="4f5f3f4e-f308-4cf8-a8bc-75254b0b808b" class="column-list"><div id="0376d939-102b-4563-bf61-b9c2398cf27c" style="width:100%" class="column"><p id="8b5e25ee-78c8-4666-ba43-7f7790742394" class="">&lt;문제 해설&gt;1, 2, 3번은 테스트 드라이버에 대한 설명4번은 테스트 스텁에 대한 설명테스트 드라이버(Driver)- 테스트 대상 하위 모듈을 호출하고, 파라미터 전달, 모듈 테스트 수행 후의 결과 도출- 상향식 테스트에 사용됨테스트 스텁(Stub)- 제어 모듈이 호출하는 타 모듈의 기능을 단순히 수행하는 도구- 하향식 테스트에 사용됨</p></div></div></details></li></ul><p id="29f82acd-9f22-4d03-b72e-88f4e9b888a2" class="">
+</p><ol type="1" id="ad23ff97-0d3a-4ad8-81bf-bd7eea0639a7" class="numbered-list" start="1"><li>시험대상 모듈을 호출하는 간이 소프트웨어이다.</li></ol><ol type="1" id="5692d4c0-57b5-45de-9aa9-1cefce77c629" class="numbered-list" start="2"><li>필요에 따라 매개 변수를 전달하고 모듈을 수행한 후의 결과를 보여줄 수 있다.</li></ol><ol type="1" id="9cfff293-771e-43f0-998a-27545fa12dae" class="numbered-list" start="3"><li>상향식 통합 테스트에서 사용된다.</li></ol><ol type="1" id="0d35dd36-5619-4525-8d52-833561716526" class="numbered-list" start="4"><li>테스트 대상 모듈이 호출하는 하위 모듈의 역할을 한다.</li></ol><hr id="103ee5ff-f25a-434f-a054-0e0c112a8abf"/><ul id="a5478209-142e-437a-9980-a70e952c30f2" class="toggle"><li><details open=""><summary><strong>다음 중 선형 구조로만 묶인 것은?</strong></summary><p id="7d076009-ca1c-452a-9c8c-e1cd249e071e" class="">정답: 2번</p><p id="f5205a84-a3a2-4d1e-8be6-a6aa909a6c38" class="">선형구조: 리스트, 스택, 큐, 덱</p><p id="c1961158-3537-43cd-b2c4-fa1003306a9a" class="">비선형구조: 트리, 그래프</p><p id="a22903e2-38f6-4472-891e-980be3c84aed" class="">파일구조: 순차파일, 색인파일, 직접파일</p></details></li></ul><p id="715c195f-3925-46ff-8868-cc74aca4d3c9" class="">
+</p><ol type="1" id="9563de32-8b0c-4caa-ae29-a3783fe25444" class="numbered-list" start="1"><li>스택, 트리</li></ol><ol type="1" id="ee5c7ceb-98ec-407f-b8eb-c324bd09086f" class="numbered-list" start="2"><li>큐, 데크</li></ol><ol type="1" id="0532a5a6-5896-472d-a1f2-b5324071287d" class="numbered-list" start="3"><li>큐, 그래프</li></ol><ol type="1" id="f1b22f4d-7ab6-422b-9380-dca8beb2ef91" class="numbered-list" start="4"><li>리스트, 그래프</li></ol><hr id="16b4b8d0-cc1b-49c9-941d-39132e7c16dd"/><ul id="aba7fc66-7a46-42e6-8ea7-a42e709b24ca" class="toggle"><li><details open=""><summary><strong>제품 소프트웨어의 사용자 매뉴얼 작성절차로 (가)~(다)와 [보기]의 기호를 바르게 연결한 것은?</strong></summary><p id="a13498f1-fa94-45ce-adfc-0bd486d47b22" class="">정답: 2번</p><p id="bd079c5f-b0f1-4e91-89c6-4907198b1b69" class="">사용자 매뉴얼 준비 절차</p><p id="0a2976a4-b5ac-4735-a057-c388d6c2fc8f" class="">작성 지침 정의 -&gt; 사용자 매뉴얼 구성 요소 정의 -&gt; 구성 요소별 내용 작성 -&gt; 사용자 매뉴얼 검토</p><p id="6ac5bd11-5017-443d-b45b-ebc069f8d36e" class="">설치와 사용에 필요한 제반 절차 및 환경 등 전체 내용을 포함하는 매뉴얼을 작성해야 합니다.</p></details></li></ul><p id="681cb19f-ebf8-47f8-b2ff-22621395835a" class="">
+</p><p id="2a89d76a-b3ba-4244-9894-498cbc06b264" class="">작성 지침 정의 → 가 → 나 → 다 → 사용설명서</p><ul id="91980b96-9476-4adb-994d-69889fde3e98" class="bulleted-list"><li style="list-style-type:disc">ㄱ 사용 설명서 검토</li></ul><ul id="4fab0faf-dabc-4207-a2f9-34a025817afd" class="bulleted-list"><li style="list-style-type:disc">ㄴ 구성 요소별 내용 작성</li></ul><ul id="b8d2e5ad-6c6a-48c7-bd0b-095f6c49a390" class="bulleted-list"><li style="list-style-type:disc">ㄷ 사용 설명서 구성 요소 정의</li></ul><p id="4d25a635-8ff1-4ab5-9d54-c36d13f656aa" class="">
+</p><ol type="1" id="af2937f2-f0ad-48c9-b4b1-41070bbc4950" class="numbered-list" start="1"><li>가-ㄱ 나-ㄴ 다-ㄷ</li></ol><ol type="1" id="1d46154b-5a5d-4299-884f-1cfb01ade6d6" class="numbered-list" start="2"><li>가-ㄷ 나-ㄴ 다-ㄱ</li></ol><ol type="1" id="24701b11-d8e6-4d18-8e2c-d4b553c5e0de" class="numbered-list" start="3"><li>가-ㄱ 나-ㄷ 다-ㄴ</li></ol><ol type="1" id="df20f5f2-a1f4-4312-a9be-e0dd4edbea76" class="numbered-list" start="4"><li>가-ㄷ 나-ㄱ 다-ㄴ</li></ol><hr id="3cbe323f-3b52-4a10-b153-7dfe01a3167c"/><ul id="347daabb-b7dd-49d5-942d-e916ff67230a" class="toggle"><li><details open=""><summary><strong>순서가 A, B, C, D로 정해진 입력 자료를 스택에 입력한 후 출력한 결과로 불가능한 것은?</strong></summary><p id="568d5093-0cf2-483f-b651-5d958d98d4ed" class="">정답: 4번</p><p id="159a52e2-bf26-4a19-be76-b915d60761e9" class="">1. A push - B push - C push - D push - D pop - C pop - B pop - A pop</p><p id="dcfd90f6-2a16-4790-9ed3-b9570e934790" class="">2. A push - B push - B pop - C push - C pop - D push - D pop - A pop</p><p id="e45949bd-c811-4331-ad2f-ac83e8851cd8" class="">3. A push - B push - C push - C pop - B pop - A pop - D push - D pop</p><p id="c4179517-e049-466f-829b-84ef36dc121b" class="">4. 스택의 환경에서 불가능한 출력 결과물</p></details></li></ul><p id="4cbccf97-4b45-4f58-b455-75072f9e336b" class="">
+</p><ol type="1" id="45e27f89-248b-4aef-8eb3-62b035ab230b" class="numbered-list" start="1"><li>D, C, B, A</li></ol><ol type="1" id="af5148cb-6f16-4ba1-b994-fb123ddea856" class="numbered-list" start="2"><li>B, C, D, A</li></ol><ol type="1" id="3a15027c-8c1c-4339-96b1-a64e174160da" class="numbered-list" start="3"><li>C, B, A, D</li></ol><ol type="1" id="e0a5d230-ee7b-420b-898c-497e9b84d11e" class="numbered-list" start="4"><li>D, B, C, A</li></ol><hr id="f585d6d6-be60-42c8-b618-3084b47f4d6e"/><ul id="9bcaa343-1033-4f85-8738-a02d913d1763" class="toggle"><li><details open=""><summary><strong>소프트웨어 품질 목표 중 하나 이상의 하드웨어 환경에서 운용되기 위해 쉽게 수정될 수 있는 시스템 능력을 의미하는 것은?</strong></summary><p id="d7889b8d-3e59-4666-8ba9-6a9d62141234" class="">정답: 1번</p><p id="02723607-c097-494e-8223-5557b671a43e" class="">이식성(Portability): 다양한 하드웨어 환경에서도 운용 가능하도록 쉽게 수정될 수 있는 능력</p><p id="54750e1e-f8d0-4f81-8fb0-bf9475ffc728" class="">2. 효율성(Efficiency): 최소의 작업으로 요구되는 기능을 수행하는 정도</p><p id="bf4d5d62-6352-4386-91c7-b2385d2f8e37" class="">3. 사용 용이성(Usability): 소프트웨어를 쉽게 사용할 수 있는 정도</p><p id="e13b8860-0d91-47a8-97df-9d38db4864c0" class="">4. 정확성(Correctness): 사용자의 요구사항을 충족시키는 정도</p></details></li></ul><p id="a4720d41-63e1-4ff2-8b8f-fe8e638a3150" class="">
+</p><ol type="1" id="e88680f0-0009-4a55-ba70-6980b583ebea" class="numbered-list" start="1"><li>Portability</li></ol><ol type="1" id="b9f5b7e7-2673-4810-8eaf-43e30ef1a240" class="numbered-list" start="2"><li>Efficiency</li></ol><ol type="1" id="b4620258-53ee-4d25-a057-a53ffe3d138a" class="numbered-list" start="3"><li>Usability</li></ol><ol type="1" id="cd203233-a524-4b0b-8a7a-38c11bf3a548" class="numbered-list" start="4"><li>Correctness</li></ol><hr id="b3fe4cda-4a47-467b-89fc-223814eb1a4c"/><ul id="275eee97-cfbf-4f52-815f-83b367983188" class="toggle"><li><details open=""><summary><strong>다음 트리에 대한 중위 순회 운행 결과는?</strong></summary><p id="6e16c10f-627a-40ed-84c2-c6d2e0c81bf3" class="">정답: 4번</p><p id="79aeeb44-bef9-4e73-83da-886612fd2422" class="">전위: 중앙 노드 먼저 방문</p><p id="c7a8eb68-12e8-4def-9fa4-8a47503256e9" class="">중위: 왼쪽 노드 방문 후 중앙 노드 방문</p><p id="89c80acc-42db-45e9-9e14-c58758e5db4c" class="">후위: 하위 트리 노드 모드 방문 중앙 노드 방문</p></details></li></ul><figure id="93aa6e4f-91d7-433e-acd6-e215393e5216" class="image"><a href="%F0%9F%97%82%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%A5%E1%84%80%E1%85%B5%20%E1%84%8B%2093aa6/Untitled.png"><img style="width:236px" src="%F0%9F%97%82%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%A5%E1%84%80%E1%85%B5%20%E1%84%8B%2093aa6/Untitled.png"/></a></figure><p id="a8899681-54cd-42eb-b317-0e55fb3a0674" class="">
+</p><ol type="1" id="d38da369-1fce-4a1b-8369-88d6d3f8956e" class="numbered-list" start="1"><li>ABDCEF</li></ol><ol type="1" id="091eed41-c396-4b89-9f92-946f54761496" class="numbered-list" start="2"><li>ABCDEF</li></ol><ol type="1" id="1503e2e6-d66c-4c5c-8d4e-e8310023d00d" class="numbered-list" start="3"><li>DBECFA</li></ol><ol type="1" id="27131ab1-2b05-471f-aaeb-853588585c84" class="numbered-list" start="4"><li>DBAECF</li></ol><hr id="c82cca53-21f6-4496-b32d-6038913fbdf1"/><ul id="d2b40a65-982c-4662-8815-f419cdbe8f19" class="toggle"><li><details open=""><summary></summary></details></li></ul><p id="f040173e-d7d1-42b1-adc6-269192906eaf" class="">
+</p><p id="cbe3de0a-dc59-428a-8d78-109a0b4fde66" class="">
+</p><div id="bd661486-fe93-4a58-b46a-27b244b4d331" class="column-list"><div id="2bde6bcb-3db8-492f-be53-d4f86e5b680f" style="width:50%" class="column"></div><div id="c89ecee7-8f12-4a0d-97f5-8cc1a0d4a7d4" style="width:50%" class="column"></div></div><div id="03fcbaeb-c39b-4ed5-9328-3a780f24b6e1" class="column-list"><div id="3b0a3f86-f097-4da2-a6ad-11cecdfe2325" style="width:50%" class="column"></div><div id="17cfc77b-891f-448f-9041-98b5063ed091" style="width:50%" class="column"></div></div><div id="817c3ab0-1714-43a4-966c-622cdd86dc47" class="column-list"><div id="f4d85e91-fc5f-456b-ab03-66c3f9fb7d9a" style="width:50%" class="column"></div><div id="62a60a0a-9f91-4e74-bd3f-e2a17892a221" style="width:50%" class="column"></div></div><div id="2d69fea0-4731-4501-9e8b-89a7b9200b8a" class="column-list"><div id="6c05b2d2-bad4-471a-9acb-6c1dc0070f5e" style="width:50%" class="column"></div><div id="80201d19-7a1a-4b9c-ad1c-10e8b61dc480" style="width:50%" class="column"></div></div><div id="1ecf6f95-0872-4efe-9510-848617545701" class="column-list"><div id="e3892362-4ab6-4e14-8366-46e09570e3b8" style="width:50%" class="column"></div><div id="c2e39292-97f5-468b-8eca-24dfe0721411" style="width:50%" class="column"></div></div><div id="bfb54842-6b97-469c-adc6-b7edaa5bd565" class="column-list"><div id="f5e92e5e-f2c2-45ab-a93d-c0da07998faa" style="width:50%" class="column"></div><div id="64274f5a-58c4-40ca-9fa9-510843b0ea39" style="width:50%" class="column"></div></div><div id="9cce0a60-965d-4e8a-bf0d-8c9cbfaceada" class="column-list"><div id="d09bb990-d5ed-4acd-9b9b-b0dcb9f47b1e" style="width:50%" class="column"></div><div id="1418ca85-d94c-415b-9eaf-d145fa31ca1b" style="width:50%" class="column"></div></div><div id="dd5542c8-25df-4185-a220-b72524d7a7bc" class="column-list"><div id="706c0072-fd3c-4166-9250-a2b12b511ea2" style="width:50%" class="column"></div><div id="affe59b4-a074-412e-b520-042a1e4ce7d5" style="width:50%" class="column"></div></div><div id="33c36cb2-31f9-4d53-ba51-81502b3827ff" class="column-list"><div id="5322773e-4e24-4d4b-8b19-fbe195114dc1" style="width:50%" class="column"></div><div id="06d91f74-6cc8-4dfb-9bf4-49e2b1fa6da8" style="width:50%" class="column"></div></div><div id="64cb0be3-f750-4b48-8967-f51ba35c0131" class="column-list"><div id="ae33fee0-fbd6-4b19-9c94-b9a16b11d75b" style="width:50%" class="column"></div><div id="92e51291-8daa-4e2b-9f62-e4ae30ab3050" style="width:50%" class="column"></div></div><div id="05eaa6e7-1b98-4374-8182-5728e5f335b0" class="column-list"><div id="84ec0cfc-ae88-468d-b3c8-105c8ed6bc66" style="width:50%" class="column"></div><div id="077d10bf-71d2-48ae-a87d-5465a5ca5a5d" style="width:50%" class="column"></div></div><div id="e659075e-d0b9-4c9a-8435-e94e459d0bbd" class="column-list"><div id="ad564f24-2176-45b9-8a80-beb08d6dc971" style="width:50%" class="column"></div><div id="0e50127d-6c92-466f-95e4-39ac8f710a64" style="width:50%" class="column"></div></div><div id="337647d7-0ca8-496f-8b63-1249dba7b15c" class="column-list"><div id="f1dc823c-3b54-4c34-a2d6-5cce47bdc228" style="width:50%" class="column"></div><div id="c27cd5bf-9dfb-4a3f-a62a-f68ee8a57636" style="width:50%" class="column"></div></div><div id="6942215d-8f5d-4b45-84d8-be2b77cda101" class="column-list"><div id="639226ab-53ea-4559-af45-590c95cc68c5" style="width:50%" class="column"></div><div id="f7f124bb-af23-49b7-ba81-2dcd4d04a2e3" style="width:50%" class="column"></div></div><div id="60715d73-dc92-4340-82f5-fb4f7607adb1" class="column-list"><div id="77d91730-e2e8-4ce4-aed7-88021fe13c60" style="width:50%" class="column"></div><div id="d83bf63c-6e56-439d-9102-577ea7933b65" style="width:50%" class="column"></div></div><div id="0dac7fc2-c839-4054-be8e-9c9a2c40a76f" class="column-list"><div id="3ecdfb07-ab05-441a-9b44-f282e088fd9c" style="width:50%" class="column"></div><div id="989cea9c-514b-4536-8861-bda6c02b38e0" style="width:50%" class="column"></div></div><div id="cc3afca4-fac7-44cf-ae57-135e6236792e" class="column-list"><div id="afb14008-0a36-44a0-aab3-5a4157f18ea0" style="width:50%" class="column"></div><div id="61d107b4-b286-4078-9ee2-cc7b175f269e" style="width:50%" class="column"></div></div><div id="4fcec69b-acdb-4f00-9783-ac117ebecb2e" class="column-list"><div id="1341980c-c06e-4b99-9a3d-54de70ef51cc" style="width:50%" class="column"></div><div id="fbc2fc9f-dc2f-4976-9778-70913fc6a3fc" style="width:50%" class="column"></div></div><div id="6856898d-564d-496d-b8a0-a57e08c3b8cc" class="column-list"><div id="fbd353cf-0e5b-484b-872c-1aba45e15028" style="width:50%" class="column"></div><div id="b5f5d239-0f8f-4054-a37c-bb86aabeb3a3" style="width:50%" class="column"></div></div><div id="1827d3c7-c181-49a5-9456-8e51c251dbff" class="column-list"><div id="d564beb4-f1ff-4930-9f91-cd8c31e55896" style="width:50%" class="column"></div><div id="8d39b568-0bd5-45e4-b75a-45d21941e921" style="width:50%" class="column"></div></div></div></article></body></html>
